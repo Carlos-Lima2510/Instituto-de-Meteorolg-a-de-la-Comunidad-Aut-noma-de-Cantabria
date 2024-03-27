@@ -1,16 +1,12 @@
-#include <string> //nclude the header file for the String class
-
-class Lluvia{
+#include <string>
+class Lluvia {
 private:
-int lluviaHistorica;
-int lluviaMensual;
-std::string Meses;
-
+    std::string aMes;
+    float cantidad;
+    float meses[7];
 public:
-    Lluvia::ConstructorMensual(std::string pMeses="");
-    Lluvia::~ConstructorMensual();
-
-    Lluvia GetLluviaHistorica();
-    void SetLluviaHistorica(lluviaHistorica);
-    void SetLluviaMensual("Enero",lluviaMensual);
+    int GetLluviaHistorica(int);
+    Lluvia(std::string Cantidad= "", std::string Mes= "");
+    float GetCantidad();
+    std::string GetMes(); // Declaración de la función
 };
