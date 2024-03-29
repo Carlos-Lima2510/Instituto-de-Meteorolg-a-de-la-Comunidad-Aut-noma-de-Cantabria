@@ -2,13 +2,14 @@
 #include <vector>
 class Lluvia {
 private:
-    std::string aMes;
-    std::vector<std::string> arrayDeCadenas = { "Enero", "Febrero", "Marzo", "Abril", "Mayo" };
     std::vector<std::string> arrayDeCadenas2;
+    float arrayDeLluvia[5];
+    int lluviaHistorica;
 public:
-    int GetLluviaHistorica(int);
-    Lluvia(std::string Mes= "");
-    ~Lluvia();
+    void SetLluviaHistorica();
+    int GetLluviaHistorica();
     void SetArraydeMes(std::string, std::string, std::string, std::string, std::string, std::string);
     std::vector<std::string> GetArraydeMes();
+    void SetArraydeLluvia(int posicion, float cantidad);
+    float GetArraydeLluvia(int posicion);
 };
