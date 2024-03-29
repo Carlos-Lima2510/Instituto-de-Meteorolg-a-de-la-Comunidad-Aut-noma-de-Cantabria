@@ -1,21 +1,27 @@
 #include <iostream>
-#include <string> // Include the header file for the String class
+#include <string> 
 #include "TEstacionTerritorial.h"
 
-int Lluvia::GetLluviaHistorica(int historica)
-{
+int Lluvia::GetLluviaHistorica(int historica){
+    std::cin >> historica;
     return historica;
 }
-
-Lluvia::Lluvia(std::string Cantidad, std::string Mes)
-{
-    std::to_string(cantidad) = Cantidad;
+Lluvia::Lluvia(std::string Mes){
     aMes = Mes;
 }
+Lluvia::~Lluvia(){}
 
-float Lluvia::GetCantidad(){
-  return cantidad;
+void Lluvia::SetArraydeMes(std::string Mes1, std::string Mes2, std::string Mes3, std::string Mes4, std::string Mes5, std::string Mes6)
+{
+    arrayDeCadenas2 = {Mes1, Mes2, Mes3, Mes4, Mes5, Mes6};
 }
-std::string Lluvia::GetMes(){
-    return aMes;
+
+std::vector<std::string> Lluvia::GetArraydeMes()
+{
+    return arrayDeCadenas2;;
 }
+
+// std::vector<std::string> Lluvia::GetArray()
+// {
+//     return arrayDeCadenas;
+// }
